@@ -1,0 +1,17 @@
+{application, word_guess_erlang, [
+    {description, "An OTP application"},
+    {vsn, "0.1.0"},
+    {registered, [word_guess_erlang_sup]},
+    {mod, {word_guess_erlang_app, []}},
+    {applications, [
+        kernel,
+        stdlib,
+        cowboy,
+        mnesia,
+        jsx
+    ]},
+    {env, []},
+    {modules, []},
+    {licenses, ["Apache-2.0"]},
+    {links, []}
+ ]}.
