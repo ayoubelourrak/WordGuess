@@ -28,14 +28,13 @@ start_link() ->
 init([]) ->
     SupFlags = #{
         strategy => one_for_one,
-        intensity => 0,
+        intensity => 1,
         period => 5
     },
     WordguessServer = #{
         id => word_guess_server,
         start => {word_guess_server, start_link, []},
         restart => permanent,
-        shutdown => 5000,
         type => worker,
         modules => [word_guess_server]
     },
